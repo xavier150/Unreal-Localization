@@ -1,6 +1,7 @@
 {
   "project_id": 735873,
-  "project_path": "Path/To/Your/Project.uproject",
+  "project_path": "/path/to/UnrealProject/MyProject.uproject",
+  "project_export_path": "/path/to/UnrealProject/Localization/MyProject",
   "languages_code_rename": {
     "es-ES": "es",
     "pt-PT": "pt",

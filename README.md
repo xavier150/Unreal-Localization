@@ -7,7 +7,8 @@ The configuration is a JSON file containing the Crowdin project ID, the Unreal p
 ```json
 {
   "project_id": 735873,
-  "project_path": "Path/To/Your/Project.uproject",
+  "project_path": "/path/to/UnrealProject/MyProject.uproject",
+  "project_export_path": "/path/to/UnrealProject/Localization/MyProject",
   "languages_code_rename": {
     "es-ES": "es",
     "pt-PT": "pt",
@@ -21,11 +22,14 @@ The configuration is a JSON file containing the Crowdin project ID, the Unreal p
 See [`mmvs_localization.example.json`](./mmvs_localization.example.json) for an example.
 
 - `project_id` (required): a positive integer identifying the Crowdin project.
-- `project_path` (required): a non-empty path to the Unreal `.uproject` file. Relative paths are interpreted relative to the JSON file, not the terminal's working directory. The example assumes the JSON is stored in the Unreal project's `Config` folder. Absolute paths are also supported; use `/` or escape backslashes as `\\` in JSON on Windows.
+- `project_path` (required): a non-empty path to the Unreal `.uproject` file.
+- `project_export_path` (required): a non-empty path to the destination folder for exported translations.
 - `languages_code_rename` (optional): an object mapping language folder names to their new names. Defaults to `{}` (no renaming).
 - `languages_code_to_exclude` (optional): a list of language folder names to remove after renaming. Defaults to `[]` (no exclusions).
 
 Missing required fields, invalid value types, unsafe language folder names, and unknown fields produce a configuration error before authentication or export.
+
+Both paths support **absolute and relative paths**. Relative paths are interpreted relative to the JSON file, not the terminal's working directory or the `.uproject` file. For a JSON stored in the Unreal project's `Config` folder, you can use `"project_path": "../MyProject.uproject"` and `"project_export_path": "../Localization/MyProject"`. The example above uses generic Linux absolute paths; on Windows, use paths such as `"C:/Projects/MyProject/MyProject.uproject"` and `"C:/Projects/MyProject/Localization/MyProject"`. Use `/` or escape backslashes as `\\` in JSON on Windows.
 
 ## Crowdin authentication
 

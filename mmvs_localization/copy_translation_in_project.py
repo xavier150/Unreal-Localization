@@ -20,5 +20,5 @@ def copy_translations_to_project(project_config: ProjectConfig) -> bool:
             shutil.copytree(lang_folder, target_path, dirs_exist_ok=True)
 
     print(f"Translations copied to project at {copy_path}")
-    print(config.post_copy_instructions)
+    print(config.post_copy_instructions.format(project_export_path=copy_path))
     return True

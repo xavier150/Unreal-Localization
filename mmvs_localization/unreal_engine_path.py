@@ -1,6 +1,5 @@
 from pathlib import Path
 
-from . import config
 from .project_config import ProjectConfig
 
 
@@ -10,5 +9,5 @@ def get_project_directory_path(project_config: ProjectConfig) -> Path:
 
 
 def get_copy_to_project_path(project_config: ProjectConfig) -> Path:
-    """Full path for copying translations to the project, relative to the project directory."""
-    return get_project_directory_path(project_config) / config.relative_copy_to_project_path
+    """Configured destination for copying translations."""
+    return project_config.project_export_path

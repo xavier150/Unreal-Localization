@@ -15,7 +15,7 @@ def load_project_config(config_path: Path) -> ProjectConfig:
     if not isinstance(data, dict):
         raise ValueError(f"Configuration file '{config_path}' must contain a JSON object.")
 
-    required_keys = {"project_id", "project_path"}
+    required_keys = {"project_id", "project_path", "project_export_path"}
     missing_keys = required_keys - set(data)
     if missing_keys:
         raise ValueError(
@@ -34,12 +34,8 @@ def load_project_config(config_path: Path) -> ProjectConfig:
     if type(project_id) is not int or project_id <= 0:
         raise ValueError(f"Configuration file '{config_path}' must contain a positive integer 'project_id'.")
 
-    project_path = data["project_path"]
-    if not isinstance(project_path, str) or not project_path.strip() or "\0" in project_path:
-        raise ValueError(f"Configuration file '{config_path}' must contain a non-empty string 'project_path'.")
-    resolved_project_path = Path(project_path).expanduser()
-    if not resolved_project_path.is_absolute():
-        resolved_project_path = config_path.resolve().parent / resolved_project_path
+    resolved_project_path = _load_path(data["project_path"], "project_path", config_path)
+    resolved_export_path = _load_path(data["project_export_path"], "project_export_path", config_path)
 
     languages_code_rename = data.get("languages_code_rename", {})
     if not isinstance(languages_code_rename, dict) or not all(
@@ -62,9 +58,19 @@ def load_project_config(config_path: Path) -> ProjectConfig:
     return ProjectConfig(
         project_id=project_id,
         project_path=resolved_project_path,
+        project_export_path=resolved_export_path,
         languages_code_rename=languages_code_rename,
         languages_code_to_exclude=languages_code_to_exclude,
     )
+
+
+def _load_path(value: object, field_name: str, config_path: Path) -> Path:
+    if not isinstance(value, str) or not value.strip() or "\0" in value:
+        raise ValueError(f"Configuration file '{config_path}' must contain a non-empty string '{field_name}'.")
+    path = Path(value).expanduser()
+    if not path.is_absolute():
+        path = config_path.resolve().parent / path
+    return path
 
 
 def _is_language_code(value: object) -> bool:
