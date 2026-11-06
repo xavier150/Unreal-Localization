@@ -1,0 +1,3 @@
+crowdin-api-client
+httpx
+keyring

@@ -12,12 +12,13 @@ from .project_config import ProjectConfig
 
 
 class crowdin_downloader():
-    def __init__(self, project_config: ProjectConfig):
+    def __init__(self, project_config: ProjectConfig, api_token: str):
         self.client: Optional[CrowdinClient] = None
         self.project_id = project_config.project_id
+        self.api_token = api_token
 
     def connect(self) -> None:
-        self.client = CrowdinClient(token=config.api_token)
+        self.client = CrowdinClient(token=self.api_token)
 
     def build_project(self) -> Optional[Dict[str, Any]]:
         # Build
@@ -103,9 +104,9 @@ class crowdin_downloader():
 
         return file_path
 
-def start_export(project_config: ProjectConfig) -> bool:
+def start_export(project_config: ProjectConfig, api_token: str) -> bool:
     print("Start exporting...")
-    my_crowdin = crowdin_downloader(project_config)
+    my_crowdin = crowdin_downloader(project_config, api_token)
     my_crowdin.connect()
     bundle = my_crowdin.build_project()
     if bundle:

@@ -1,9 +1,6 @@
 from typing import Dict, List
 from pathlib import Path
 
-# POEditor API Key
-api_token: str = "xxxxxxxxxxxxx" #dtv5
-
 relative_download_translations_path: Path = Path("ExportedTranslations/Downloaded")
 download_translations_filename: str = "translations.zip"
 

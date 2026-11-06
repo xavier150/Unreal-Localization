@@ -5,15 +5,16 @@ from . import bpl
 from .project_config import ProjectConfig
 
 
-def main(project_config: ProjectConfig):
+def main(project_config: ProjectConfig, api_token: str):
     bpl.console_utils.clear_console()
     bpl.advprint.print_simple_title("MMVS Localization Tool")
 
-    run_download_translation(project_config, True, True, True)
+    run_download_translation(project_config, api_token, True, True, True)
 
 
 def run_download_translation(
     project_config: ProjectConfig,
+    api_token: str,
     download: bool = True, 
     extract: bool = True,
     copy_to_project: bool = True
@@ -22,7 +23,7 @@ def run_download_translation(
 
     if download:
         print(bpl.color_set.green("STEP 1: Downloading translations from Crowdin..."))
-        result = crowdin_export.start_export(project_config)
+        result = crowdin_export.start_export(project_config, api_token)
         if not result:
             print("Error during download. Exiting.")
             return
