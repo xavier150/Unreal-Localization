@@ -1,3 +1,11 @@
 {
-  "project_id": 735873
+  "project_id": 735873,
+  "project_path": "../MacroMicroVRService.uproject",
+  "languages_code_rename": {
+    "es-ES": "es",
+    "pt-PT": "pt",
+    "zh-CN": "zh-Hans",
+    "zh-TW": "zh-Hant"
+  },
+  "languages_code_to_exclude": ["en"]
 }

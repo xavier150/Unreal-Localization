@@ -1,5 +1,6 @@
 # Project folders
 ExportedTranslations
+tests
 
 # Python bytecode and caches
 __pycache__/

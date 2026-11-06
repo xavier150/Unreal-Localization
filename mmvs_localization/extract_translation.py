@@ -4,7 +4,7 @@ import zipfile
 from pathlib import Path
 from typing import Dict
 from . import translation_paths
-from . import config
+from .project_config import ProjectConfig
 
 
 def clear_extract_folder(extract_path: Path):
@@ -52,7 +52,7 @@ def apply_exclusion_rules(extract_path: Path, languages_code_to_exclude: list[st
         if lang_folder.exists() and lang_folder.is_dir():
             shutil.rmtree(lang_folder)
 
-def extract_translation():
+def extract_translation(project_config: ProjectConfig):
     file_path: Path = translation_paths.get_translations_download_path()
     extract_path: Path = translation_paths.get_translations_extract_path()
 
@@ -66,10 +66,10 @@ def extract_translation():
     clean_translation_folder_structure(extract_path)
 
     # Apply renaming rules to folders after rearranging files
-    apply_renaming_rules(extract_path, config.languages_code_rename)
+    apply_renaming_rules(extract_path, project_config.languages_code_rename)
 
     # Apply exclusion rules to remove unwanted language folders
-    apply_exclusion_rules(extract_path, config.languages_code_to_exclude)
+    apply_exclusion_rules(extract_path, project_config.languages_code_to_exclude)
 
     print(f"Translations extracted to {extract_path}")
     return extract_path

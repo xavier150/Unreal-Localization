@@ -1,5 +1,6 @@
 from pathlib import Path
 from . import config 
+from .project_config import ProjectConfig
 
 def get_localization_path() -> Path:
     # Get the absolute path of the current script
@@ -29,10 +30,10 @@ def get_translations_extract_path() -> Path:
     path: Path = localization_path / config.relative_translations_export_path
     return path
 
-def get_project_path() -> Path:
-    return config.project_path
+def get_project_path(project_config: ProjectConfig) -> Path:
+    return project_config.project_path
 
 
-def get_copy_to_project_path() -> Path:
+def get_copy_to_project_path(project_config: ProjectConfig) -> Path:
     from . import unreal_engine_path
-    return unreal_engine_path.get_copy_to_project_path()
+    return unreal_engine_path.get_copy_to_project_path(project_config)

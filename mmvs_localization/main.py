@@ -29,14 +29,14 @@ def run_download_translation(
             return
     if extract:
         print(bpl.color_set.green("STEP 2: Extracting and processing translations..."))
-        result = extract_translation.extract_translation()
+        result = extract_translation.extract_translation(project_config)
         if not result:
             print("Error during extraction. Exiting.")
             return
 
     if copy_to_project:
         print(bpl.color_set.green("STEP 3: Copying translations to project..."))
-        result = copy_translation_in_project.copy_translations_to_project()
+        result = copy_translation_in_project.copy_translations_to_project(project_config)
         if not result:
             print("Error during copying translations to project. Exiting.")
             return

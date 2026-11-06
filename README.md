@@ -2,15 +2,30 @@
 
 Export Crowdin translations to an Unreal Engine project with the command-line interface.
 
-The configuration is a JSON file containing the Crowdin project ID:
+The configuration is a JSON file containing the Crowdin project ID, the Unreal project path, and optional language rules:
 
 ```json
 {
-  "project_id": 735873
+  "project_id": 735873,
+  "project_path": "../MacroMicroVRService.uproject",
+  "languages_code_rename": {
+    "es-ES": "es",
+    "pt-PT": "pt",
+    "zh-CN": "zh-Hans",
+    "zh-TW": "zh-Hant"
+  },
+  "languages_code_to_exclude": ["en"]
 }
 ```
 
 See [`mmvs_localization.example.json`](./mmvs_localization.example.json) for an example.
+
+- `project_id` (required): a positive integer identifying the Crowdin project.
+- `project_path` (required): a non-empty path to the Unreal `.uproject` file. Relative paths are interpreted relative to the JSON file, not the terminal's working directory. The example assumes the JSON is stored in the Unreal project's `Config` folder. Absolute paths are also supported; use `/` or escape backslashes as `\\` in JSON on Windows.
+- `languages_code_rename` (optional): an object mapping language folder names to their new names. Defaults to `{}` (no renaming).
+- `languages_code_to_exclude` (optional): a list of language folder names to remove after renaming. Defaults to `[]` (no exclusions).
+
+Missing required fields, invalid value types, unsafe language folder names, and unknown fields produce a configuration error before authentication or export.
 
 ## Crowdin authentication
 
@@ -55,3 +70,9 @@ python3 /path/to/UnrealLocalization/run_mmvs_localization.py export "/path/to/Un
 ```
 
 If you run `run_mmvs_localization.py` without arguments, it prompts for the configuration file path. The VS Code **MMVS Localization** F5 launch configuration uses this prompt.
+
+## Tests
+
+```shell
+python -m unittest discover -s tests
+```
