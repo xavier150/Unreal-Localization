@@ -7,7 +7,7 @@ The configuration is a JSON file containing the Crowdin project ID, the Unreal p
 ```json
 {
   "project_id": 735873,
-  "project_path": "../MacroMicroVRService.uproject",
+  "project_path": "Path/To/Your/Project.uproject",
   "languages_code_rename": {
     "es-ES": "es",
     "pt-PT": "pt",
