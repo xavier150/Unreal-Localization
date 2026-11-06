@@ -5,9 +5,8 @@ from . import config
 from .project_config import ProjectConfig
 
 
-def copy_translations_to_project(project_config: ProjectConfig) -> bool:
+def copy_translations_to_project(project_config: ProjectConfig, extract_path: Path) -> bool:
     copy_path: Path = translation_paths.get_copy_to_project_path(project_config)
-    extract_path: Path = translation_paths.get_translations_extract_path()
 
     if not extract_path.exists():
         print(f"Extract path {extract_path} does not exist.")

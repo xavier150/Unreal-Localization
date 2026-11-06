@@ -7,7 +7,6 @@ import httpx
 import time
 from . import bpl
 from . import config
-from . import translation_paths
 from .project_config import ProjectConfig
 
 
@@ -60,7 +59,7 @@ class crowdin_downloader():
             if isinstance(response['data']['url'], str):
                 return response['data']['url']
 
-    def download_project(self, bundle: Dict[str, Any]) -> Optional[Path]:
+    def download_project(self, bundle: Dict[str, Any], file_path: Path) -> Optional[Path]:
 
         if self.client is None:
             return None
@@ -88,7 +87,6 @@ class crowdin_downloader():
             return None
     
         # Specify where to save the file
-        file_path: Path = translation_paths.get_translations_download_path()
         folder = file_path.parent
         folder.mkdir(parents=True, exist_ok=True)
 
@@ -104,13 +102,13 @@ class crowdin_downloader():
 
         return file_path
 
-def start_export(project_config: ProjectConfig, api_token: str) -> bool:
+def start_export(project_config: ProjectConfig, api_token: str, file_path: Path) -> bool:
     print("Start exporting...")
     my_crowdin = crowdin_downloader(project_config, api_token)
     my_crowdin.connect()
     bundle = my_crowdin.build_project()
     if bundle:
-        result = my_crowdin.download_project(bundle)
+        result = my_crowdin.download_project(bundle, file_path)
         if result:
             print("Export successful.")
             return True

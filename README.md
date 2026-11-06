@@ -75,6 +75,10 @@ python3 /path/to/UnrealLocalization/run_mmvs_localization.py export "/path/to/Un
 
 If you run `run_mmvs_localization.py` without arguments, it prompts for the configuration file path. The VS Code **MMVS Localization** F5 launch configuration uses this prompt.
 
+## Temporary files
+
+Each export downloads and extracts translations in a unique operating-system temporary directory (Windows or Linux). Intermediate files are automatically removed on completion or failure; copied translations remain in `project_export_path`. No intermediate files are written to the tool's installation folder. Previous exports are not reused as a cache.
+
 ## Tests
 
 ```shell

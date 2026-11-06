@@ -3,7 +3,6 @@ import shutil
 import zipfile
 from pathlib import Path
 from typing import Dict
-from . import translation_paths
 from .project_config import ProjectConfig
 
 
@@ -52,10 +51,7 @@ def apply_exclusion_rules(extract_path: Path, languages_code_to_exclude: list[st
         if lang_folder.exists() and lang_folder.is_dir():
             shutil.rmtree(lang_folder)
 
-def extract_translation(project_config: ProjectConfig):
-    file_path: Path = translation_paths.get_translations_download_path()
-    extract_path: Path = translation_paths.get_translations_extract_path()
-
+def extract_translation(project_config: ProjectConfig, file_path: Path, extract_path: Path):
     # Ensure the extraction folder exists, and clear it if it does
     clear_extract_folder(extract_path)
 

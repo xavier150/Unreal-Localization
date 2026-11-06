@@ -1,9 +1,4 @@
-from pathlib import Path
-
-relative_download_translations_path: Path = Path("ExportedTranslations/Downloaded")
 download_translations_filename: str = "translations.zip"
-
-relative_translations_export_path: Path = Path("ExportedTranslations/Extracted")
 
 crowdin_download_max_attempts: int = 3
 crowdin_delay_between_attempts_seconds: int = 5
