@@ -1,0 +1,307 @@
+{
+	"source_locations_changes": [
+		{
+			"old_source_locations": [
+				"/Game/StringTable/ProfileUserKinks.ProfileUserKinks",
+				"/Game/StringTable/UserInterface/ProfileUserKinks.ProfileUserKinks"
+				
+			],
+			"new_source_location": "/Game/StringTable/UserInterface/Settings/KinksUserSettings.KinksUserSettings"
+		},
+		{
+			"old_source_locations": [
+				"/Game/StringTable/SettingsTexts.SettingsTexts",
+				"/Game/StringTable/UserInterface/SettingsTexts.SettingsTexts"
+				
+			],
+			"new_source_location": "/Game/StringTable/UserInterface/Settings/SettingsTexts.SettingsTexts"
+		},
+		{
+			"old_source_locations": [
+				"/Game/StringTable/SettingsOptionsTexts.SettingsOptionsTexts",
+				"/Game/StringTable/UserInterface/SettingsOptionsTexts.SettingsOptionsTexts"
+			],
+			"new_source_location": "/Game/StringTable/UserInterface/Settings/SettingsOptionsTexts.SettingsOptionsTexts"
+		},
+		{
+			"old_source_locations": [
+				"/Game/StringTable/UserInterface/Settings/SelfCensureUserSettings.SelfCensureUserSettings",
+				"/Game/StringTable/UserInterface/Settings/UserSelfCensureSettings.UserSelfCensureSettings"
+			],
+			"new_source_location": "/Game/StringTable/UserInterface/Settings/UserSelfCensorSettings.UserSelfCensorSettings"
+		}
+	],
+	"keys_changes_groups": [
+		{
+			"old_source_location": "/Game/StringTable/UserInterface/Settings/SettingsTexts.SettingsTexts",
+			"new_source_location": "/Game/StringTable/UserInterface/Settings/ProfileUserSettings.ProfileUserSettings",
+			"keys_changes": [
+			{"old": "OnlineUserName","new": "Title_OnlineUserName"},
+			{"old": "TypeYourName","new": "Hint_OnlineUserName"}
+			]
+		},
+		{
+			"old_source_location": "/Game/StringTable/UserInterface/Settings/SettingsTexts.SettingsTexts",
+			"new_source_location": "/Game/StringTable/UserInterface/Settings/ErgonomicsUserSettings.ErgonomicsUserSettings",
+			"keys_changes": [
+			{"old": "UsePinnedWhiteStunEffect", "new": "Title_UsePinnedWhiteStunEffect"},
+			{"old": "UsePinnedBlackScreenEffect","new": "Title_UsePinnedBlackScreenEffect"},
+			{"old": "UseDamageEffect","new": "Title_UseDamageEffect"},
+			{"old": "FirstPersonFOV","new": "Title_FirstPersonFOV"},
+			{"old": "ThirdPersonFOV","new": "Title_ThirdPersonFOV"},
+			{"old": "HUD_ShowCrosshair","new": "Title_HUD_ShowCrosshair"},
+			{"old": "HUD_ShowGait","new": "Title_HUD_ShowGait"},
+			{"old": "HUD_ShowHealth","new": "Title_HUD_ShowHealth"},
+			{"old": "HUD_ShowControlsOverlay","new": "Title_HUD_ShowControlsOverlay"},
+			{"old": "HUD_ShowTooltipsOverlay","new": "Title_HUD_ShowTooltipsOverlay"},
+			{"old": "HUD_ShowNotifications","new": "Title_HUD_ShowNotifications"},
+			{"old": "HUD_ShowStance","new": "Title_HUD_ShowStance"},
+			{"old": "HUD_ShowVRUI","new": "Title_HUD_ShowVRUI"},
+			{"old": "HUD_VRUIScale","new": "Title_HUD_VRUIScale"},
+			{"old": "HUD_PlayerHUDScale","new": "Title_HUD_PlayerHUDScale"},
+			{"old": "HUD_VRUIVisibleDistance","new": "Title_HUD_VRUIVisibleDistance"},
+			{"old": "HUD_ShowUserNames","new": "Title_HUD_ShowUserNames"},
+			{"old": "HUD_ShowStompTargetPreview","new": "Title_HUD_ShowStompTargetPreview"},
+			{"old": "HUD_ShowHandCollisionArea","new": "Title_HUD_ShowHandCollisionArea"}
+			]
+		},
+		{
+			"old_source_location": "/Game/StringTable/UserInterface/Settings/SettingsTexts.SettingsTexts",
+			"new_source_location": "/Game/StringTable/UserInterface/Settings/GraphicsUserSettings.GraphicsUserSettings",
+			"keys_changes": [
+			{"old": "GlobalQualityOption","new": "Title_GlobalQualityOption"},
+			{"old": "FrameRateLimit","new": "Title_FrameRateLimit"},
+			{"old": "FrameRateLimit_InVR","new": "Title_FrameRateLimit_InVR"},
+			{"old": "LimitFPS","new": "Title_LimitFPS"},
+			
+			{"old": "ViewDistance","new": "Title_ViewDistance"},
+			{"old": "EffectsQuality","new": "Title_EffectsQuality"},
+			{"old": "FoliageQuality","new": "Title_FoliageQuality"},
+			{"old": "PostProcessing","new": "Title_PostProcessing"},
+			{"old": "ShadowQuality","new": "Title_ShadowQuality"},
+			{"old": "TextureQuality","new": "Title_TextureQuality"},
+			{"old": "ShadingQuality","new": "Title_ShadingQuality"},
+			
+			{"old": "UseMotionBlur","new": "Title_UseMotionBlur"},
+			
+			{"old": "RenderMethod","new": "Title_RenderMethod"},
+			{"old": "GlobalIlluminationQuality","new": "Title_GlobalIlluminationQuality"},
+			{"old": "UseLumenHardwareRayTracing","new": "Title_UseLumenHardwareRayTracing"},
+			
+			{"old": "ReflectionQuality","new": "Title_ReflectionQuality"},
+			{"old": "UsePlanarReflection","new": "Title_UsePlanarReflection"},
+			{"old": "ReflectionRenderingResolution","new": "Title_ReflectionRenderingResolution"},
+			
+			{"old": "AntiAliasingMethod","new": "Title_AntiAliasingMethod"},
+			{"old": "Anti-Aliasing","new": "Title_AntiAliasingQuality"},
+			
+			{"old": "AntiAliasingMethod","new": "Title_AntiAliasingMethod"},
+			{"old": "Anti-Aliasing","new": "Title_AntiAliasingQuality"},
+			
+			{"old": "VRRenderingResolution","new": "Title_VRRenderingResolution"},
+			{"old": "RenderingResolution","new": "Title_RenderingResolution"}
+			]
+		},
+		{
+			"old_source_location": "/Game/StringTable/UserInterface/Settings/SettingsOptionsTexts.SettingsOptionsTexts",
+			"new_source_location": "/Game/StringTable/UserInterface/Settings/GraphicsUserSettings.GraphicsUserSettings",
+			"keys_changes": [
+			{"old": "Common_Custom","new": "Title_GraphicsQualityOption_Custom"},
+			{"old": "Common_Epic","new": "Title_GraphicsQualityOption_Epic"},
+			{"old": "Common_High","new": "Title_GraphicsQualityOption_High"},
+			{"old": "Common_Medium","new": "Title_GraphicsQualityOption_Medium"},
+			{"old": "Common_Low","new": "Title_GraphicsQualityOption_Low"},
+			
+			{"old": "Distance_Epic","new": "Title_DistanceQualityOption_Epic"},
+			{"old": "Distance_High","new": "Title_DistanceQualityOption_High"},
+			{"old": "Distance_Medium","new": "Title_DistanceQualityOption_Medium"},
+			{"old": "Distance_Low","new": "Title_DistanceQualityOption_Low"},
+			
+			{"old": "FrameRateLimit_NoLimit","new": "Title_FrameRateLimitOption_NoLimit"},
+			
+			{"old": "RenderMethod_Auto","new": "Title_RenderMethodOption_Auto"},
+			{"old": "RenderMethod_Standard","new": "Title_RenderMethodOption_Standard"},
+			{"old": "RenderMethod_Lumen","new": "Title_RenderMethodOption_Lumen"},
+			{"old": "RenderMethod_PathTracing","new": "Title_RenderMethodOption_PathTracing"},
+			
+			{"old": "AntiAliasingMethod_None","new": "Title_AntiAliasingMethodOption_None"},
+			{"old": "AntiAliasingMethod_FXAA","new": "Title_AntiAliasingMethodOption_FXAA"},
+			{"old": "AntiAliasingMethod_TAA","new": "Title_AntiAliasingMethodOption_TAA"},
+			{"old": "AntiAliasingMethod_MSAA","new": "Title_AntiAliasingMethodOption_MSAA"},
+			{"old": "AntiAliasingMethod_TSR","new": "Title_AntiAliasingMethodOption_TSR"},
+			
+			{"old": "ReflectionMethod_None","new": "Title_ReflectionMethodOption_None"},
+			{"old": "ReflectionMethod_Lumen","new": "Title_ReflectionMethodOption_Lumen"},
+			{"old": "ReflectionMethod_ScreenSpace","new": "Title_ReflectionMethodOption_ScreenSpace"}
+			
+			
+			]
+		},
+		{
+			"old_source_location": "/Game/StringTable/UserInterface/Settings/SettingsOptionsTexts.SettingsOptionsTexts",
+			"new_source_location": "/Game/StringTable/UserInterface/Settings/VRSpectatorUserSettings.VRSpectatorUserSettings",
+			"keys_changes": [
+			{"old": "VRUnrealSpectatorMode_Undistorted","new": "Title_VR_UnrealSpectatorModeOption_Undistorted"},
+			{"old": "VRUnrealSpectatorMode_Distorted","new": "Title_VR_UnrealSpectatorModeOption_Distorted"},
+			{"old": "VRUnrealSpectatorMode_SingleEye","new": "Title_VR_UnrealSpectatorModeOption_SingleEye"},
+			{"old": "VRUnrealSpectatorMode_SingleEyeCroppedToFill","new": "Title_VR_UnrealSpectatorModeOption_SingleEyeCroppedToFill"},
+			{"old": "VRUnrealSpectatorMode_SingleEyeLetterboxed","new": "Title_VR_UnrealSpectatorModeOption_SingleEyeLetterboxed"},
+			
+			{"old": "VRSpectatorMode_Off","new": "Title_VR_SpectatorModeOption_Off"},
+			{"old": "VRSpectatorMode_PlayerHead","new": "Title_VR_SpectatorModeOption_PlayerHead"},
+			{"old": "VRSpectatorMode_UnrealNativeScreen","new": "Title_VR_SpectatorModeOption_UnrealNativeScreen"}
+			
+			]
+		},
+		{
+			"old_source_location": "/Game/StringTable/UserInterface/Settings/SettingsOptionsTexts.SettingsOptionsTexts",
+			"new_source_location": "/Game/StringTable/UserInterface/Settings/LocalizationUserSettings.LocalizationUserSettings",
+			"keys_changes": [
+			
+			{"old": "LengthUnitType_Imperial","new": "Title_LengthUnitTypeOption_Imperial"},
+			{"old": "LengthUnitType_Metric","new": "Title_LengthUnitTypeOption_Metric"},
+			
+			{"old": "WeightUnitType_Imperial_UK","new": "Title_WeightUnitTypeOption_Imperial_UK"},
+			{"old": "WeightUnitType_Imperial_US","new": "Title_WeightUnitTypeOption_Imperial_US"},
+			{"old": "WeightUnitType_Metric","new": "Title_WeightUnitTypeOption_Metric"},
+			{"old": "WeightUnitType_Troy","new": "Title_WeightUnitTypeOption_Troy"}
+			
+			]
+		},
+		{
+			"old_source_location": "/Game/StringTable/UserInterface/Settings/SettingsOptionsTexts.SettingsOptionsTexts",
+			"new_source_location": "/Game/StringTable/UserInterface/Settings/VideoUserSettings.VideoUserSettings",
+			"keys_changes": [
+			
+			{"old": "WindowMode_FullScreen","new": "Title_WindowModeOption_FullScreen"},
+			{"old": "WindowMode_Windowed","new": "Title_WindowModeOption_Windowed"}
+
+			
+			]
+		},
+		{
+			"old_source_location": "/Game/StringTable/UserInterface/Settings/SettingsOptionsTexts.SettingsOptionsTexts",
+			"new_source_location": "/Game/StringTable/UserInterface/Settings/VRUserSettings.VRUserSettings",
+			"keys_changes": [
+			{"old": "VR_HandType_ControllersOnly","new": "Title_VR_HandTypeOption_ControllersOnly"},
+			{"old": "VR_HandType_FullBody","new": "Title_VR_HandTypeOption_FullBody"},
+			{"old": "VR_HandType_FullBodyAndControllers","new": "Title_VR_HandTypeOption_FullBodyAndControllers"},
+			{"old": "VR_HandType_Hands","new": "Title_VR_HandTypeOption_Hands"},
+			{"old": "VR_HandType_HandsAndControllers","new": "Title_VR_HandTypeOption_HandsAndControllers"},
+			
+			{"old": "VR_CameraSetup_Auto","new": "Title_VR_CameraSetupOption_Auto"},
+			{"old": "VR_CameraSetup_Eye","new": "Title_VR_CameraSetupOption_Eye"},
+			{"old": "VR_CameraSetup_Floor","new": "Title_VR_CameraSetupOption_Floor"},
+			
+			{"old": "VR_PlayingMode_SitDown","new": "Title_VR_PlayingModeOption_SitDown"},
+			{"old": "VR_PlayingMode_StandUp","new": "Title_VR_PlayingModeOption_StandUp"}
+			]
+		},
+		{
+			"old_source_location": "/Game/StringTable/UserInterface/Settings/SettingsTexts.SettingsTexts",
+			"new_source_location": "/Game/StringTable/UserInterface/Settings/VideoUserSettings.VideoUserSettings",
+			"keys_changes": [
+			{"old": "WindowMode","new": "Title_WindowMode"},
+			{"old": "WindowModeNote","new": "WindowModeNote"},
+			{"old": "ScreenResolution","new": "Title_ScreenResolution"},
+			{"old": "ScreenResolution_Width","new": "Title_ScreenResolution_Width"},
+			{"old": "ScreenResolution_Height","new": "Title_ScreenResolution_Height"}
+			]
+		},
+		{
+			"old_source_location": "/Game/StringTable/UserInterface/Settings/SettingsTexts.SettingsTexts",
+			"new_source_location": "/Game/StringTable/UserInterface/Settings/SoundsUserSettings.SoundsUserSettings",
+			"keys_changes": [
+			{"old": "VolumeMaster","new": "Title_VolumeMaster"},
+			{"old": "VolumeMusic","new": "Title_VolumeMusic"},
+			{"old": "VolumeSFX","new": "Title_VolumeSFX"},
+			{"old": "VolumeGeneral","new": "Title_VolumeGeneral"},
+			{"old": "VolumeUI","new": "Title_VolumeUI"}
+			]
+		},
+		{
+			"old_source_location": "/Game/StringTable/UserInterface/Settings/SettingsTexts.SettingsTexts",
+			"new_source_location": "/Game/StringTable/UserInterface/Settings/SelfCensorUserSettings.SelfCensorUserSettings",
+			"keys_changes": [
+			{"old": "AllowBlood","new": "Title_AllowBlood"},
+			{"old": "AllowGore","new": "Title_AllowGore"}
+			]
+		},
+		{
+			"old_source_location": "/Game/StringTable/UserInterface/Settings/SettingsTexts.SettingsTexts",
+			"new_source_location": "/Game/StringTable/UserInterface/Settings/VRUserSettings.VRUserSettings",
+			"keys_changes": [
+			{"old": "RotationPerTurn","new": "Title_VR_RotationPerTurn"},
+			{"old": "CameraSetup","new": "Title_VR_CameraSetup"},
+			{"old": "PlayingMode","new": "Title_VR_PlayingMode"},
+			{"old": "CameraZOffset","new": "Title_VR_CameraZOffset"},
+			{"old": "StandUpEyesHeight","new": "Title_VR_StandUpEyesHeight"},
+			{"old": "SitDownEyesHeight","new": "Title_VR_SitDownEyesHeight"},
+			{"old": "UseFingerTracking","new": "Title_VR_UseFingerTracking"},
+			
+			{"old": "VRHandType","new": "Title_VR_HandType"},
+			{"old": "OpenMenuWithHeadOrientation","new": "Title_VR_OpenMenuWithHeadOrientation"},
+			{"old": "ShowBodyWhenStuckToSole","new": "Title_VR_ShowBodyWhenStuckToSole"}
+			]
+		},
+		{
+			"old_source_location": "/Game/StringTable/UserInterface/Settings/SettingsOptionsTexts.SettingsOptionsTexts",
+			"new_source_location": "/Game/StringTable/UserInterface/Settings/VRUserSettings.VRUserSettings",
+			"keys_changes": [
+			{"old": "CalibrateSitDown","new": "Title_VR_PlayingModeOption_CalibrateSitDown"},
+			{"old": "CalibrateStandUp","new": "Title_VR_PlayingModeOption_CalibrateStandUp"}
+			]
+		},
+		{
+			"old_source_location": "/Game/StringTable/UserInterface/Settings/SettingsTexts.SettingsTexts",
+			"new_source_location": "/Game/StringTable/UserInterface/Settings/VRSpectatorUserSettings.VRSpectatorUserSettings",
+			"keys_changes": [
+			{"old": "VRSpectatorMode","new": "Title_VR_SpectatorMode"},
+			{"old": "VRUnrealSpectatorMode","new": "Title_VR_UnrealSpectatorMode"},
+			{"old": "VRSpectatorMaxFrameRate","new": "Title_VR_SpectatorMaxFrameRate"},
+			{"old": "VRSpectatorRenderingResolution","new": "Title_VR_SpectatorRenderingResolution"},
+			
+			{"old": "VRSpectatorCameraFOV","new": "Title_VR_SpectatorCameraFOV"},
+			{"old": "VRSpectatorShowHUD","new": "Title_VR_SpectatorShowHUD"},
+			
+			{"old": "VRSpectatorPerfNote","new": "VRSpectatorPerfNote"}
+			]
+		},
+		{
+			"old_source_location": "/Game/StringTable/UserInterface/Settings/SettingsTexts.SettingsTexts",
+			"new_source_location": "/Game/StringTable/UserInterface/Settings/LocalizationUserSettings.LocalizationUserSettings",
+			"keys_changes": [
+			{"old": "Language","new": "Title_Language"},
+			{"old": "LengthUnitType","new": "Title_LengthUnitType"},
+			{"old": "WeightUnitType","new": "Title_WeightUnitType"},
+			{"old": "LocalizationTextExample","new": "LocalizationTextExample"}
+			]
+		},
+		{
+			"old_source_location": "/Game/StringTable/UserInterface/Settings/ErgonomicsUserSettings.ErgonomicsUserSettings",
+			"new_source_location": "/Game/StringTable/UserInterface/Settings/ErgonomicsUserSettings.ErgonomicsUserSettings",
+			"keys_changes": [
+			{"old": "Title_UsePinnedBlackScreenEffect", "new": "Title_EnablePinnedBlackScreenEffect"},
+			{"old": "Title_UsePinnedWhiteStunEffect","new": "Title_EnablePinnedWhiteStunEffect"},
+			{"old": "Title_UseDamageEffect","new": "Title_EnableDamageEffect"}
+			]
+		},
+		{
+			"old_source_location": "/Game/StringTable/UserInterface/Settings/GraphicsUserSettings.GraphicsUserSettings",
+			"new_source_location": "/Game/StringTable/UserInterface/Settings/UserVideoSettings.UserVideoSettings",
+			"keys_changes": [
+			{"old": "Title_FrameRateLimit","new": "Title_FrameRateLimit"},
+			{"old": "Title_FrameRateLimit_InVR","new": "Title_FrameRateLimit_InVR"},
+			{"old": "Title_LimitFPS","new": "Title_LimitFPS"}
+			]
+		},
+		{
+			"old_source_location": "/Game/StringTable/UserInterface/Settings/GraphicsUserSettings.GraphicsUserSettings",
+			"new_source_location": "/Game/StringTable/UserInterface/Settings/UserVideoSettings.UserVideoSettings",
+			"keys_changes": [
+			
+			{"old": "Title_FrameRateLimitOption_NoLimit","new": "Title_FrameRateLimitOption_NoLimit"}
+			]
+		}
+	]
+}
