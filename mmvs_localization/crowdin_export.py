@@ -8,16 +8,16 @@ import time
 from . import bpl
 from . import config
 from . import translation_paths
+from .project_config import ProjectConfig
 
 
 class crowdin_downloader():
-    def __init__(self):
+    def __init__(self, project_config: ProjectConfig):
         self.client: Optional[CrowdinClient] = None
-        self.project_id: int = -1
+        self.project_id = project_config.project_id
 
     def connect(self) -> None:
         self.client = CrowdinClient(token=config.api_token)
-        self.project_id = config.project_id
 
     def build_project(self) -> Optional[Dict[str, Any]]:
         # Build
@@ -103,9 +103,9 @@ class crowdin_downloader():
 
         return file_path
 
-def start_export() -> bool:
+def start_export(project_config: ProjectConfig) -> bool:
     print("Start exporting...")
-    my_crowdin = crowdin_downloader()
+    my_crowdin = crowdin_downloader(project_config)
     my_crowdin.connect()
     bundle = my_crowdin.build_project()
     if bundle:

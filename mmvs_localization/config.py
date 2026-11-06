@@ -1,32 +1,8 @@
-import json
 from typing import Dict, List
 from pathlib import Path
 
 # POEditor API Key
 api_token: str = "xxxxxxxxxxxxx" #dtv5
-
-# Crowdin Project ID
-project_id: int = 735873 #Macro Micro VR Service
-
-
-def load_project_id(config_path: Path) -> None:
-    global project_id
-
-    try:
-        with config_path.open(encoding="utf-8") as config_file:
-            project_config = json.load(config_file)
-    except json.JSONDecodeError as error:
-        raise ValueError(f"Invalid JSON in configuration file '{config_path}': {error}") from error
-
-    if not isinstance(project_config, dict):
-        raise ValueError(f"Configuration file '{config_path}' must contain a JSON object.")
-
-    loaded_project_id = project_config.get("project_id")
-    if isinstance(loaded_project_id, bool) or not isinstance(loaded_project_id, int) or loaded_project_id <= 0:
-        raise ValueError(f"Configuration file '{config_path}' must contain a positive integer 'project_id'.")
-
-    project_id = loaded_project_id
-
 
 relative_download_translations_path: Path = Path("ExportedTranslations/Downloaded")
 download_translations_filename: str = "translations.zip"

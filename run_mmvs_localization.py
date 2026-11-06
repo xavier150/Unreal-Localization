@@ -2,7 +2,7 @@ import argparse
 from pathlib import Path
 
 from mmvs_localization import main
-from mmvs_localization import config
+from mmvs_localization.config_loader import load_project_config
 
 
 def main_cli():
@@ -21,11 +21,11 @@ def main_cli():
         config_path = args.config.expanduser()
 
     try:
-        config.load_project_id(config_path)
+        project_config = load_project_config(config_path)
     except (OSError, ValueError) as error:
         parser.error(str(error))
 
-    main.main()
+    main.main(project_config)
 
 
 if __name__ == "__main__":
