@@ -2,6 +2,10 @@
 
 Export Crowdin translations to an Unreal Engine project with the command-line interface.
 
+![Crowdin translation export in the terminal](https://github.com/xavier150/Unreal-Localization/wiki/images/terminal_result.png)
+
+The tool is configured through a JSON file rather than hardcoded settings. It was originally developed for the [MMVS video game](https://github.com/xavier150/MMVS), and currently focuses on using Crowdin to export translations to Unreal Engine. Broader support for other localization workflows is planned for the future.
+
 The configuration is a JSON file containing the Crowdin project ID, the Unreal project path, and optional language rules:
 
 ```json
