@@ -68,7 +68,7 @@ python run_mmvs_localization.py auth logout
 On Windows, using PowerShell:
 
 ```powershell
-py P:\github_repos\other_projects\UnrealLocalization\run_mmvs_localization.py export "M:\MMVS_ProjectFiles_v2\UnrealProject\Config\mmvs_localization.json"
+py P:\github_repos\other_projects\Unreal-Localization\run_mmvs_localization.py export "M:\MMVS_ProjectFiles_v2\UnrealProject\Config\mmvs_localization.json"
 ```
 
 On Linux, using Bash:
