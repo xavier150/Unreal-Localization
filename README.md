@@ -88,3 +88,10 @@ Each export downloads and extracts translations in a unique operating-system tem
 ```shell
 python -m unittest discover -s tests
 ```
+
+## Additional Notes
+
+You can join my Discord server for more information or if you need help.  
+
+Discord [<img src="https://github.com/xavier150/Unreal-Localization/wiki/images/socials/discord_symbol_blurple.png" alt="Discord Icon" width="auto" height="12">](https://discord.gg/XuYeGCFtxa) ->
+[BleuRaven side projects](https://discord.gg/XuYeGCFtxa)  
